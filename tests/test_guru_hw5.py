@@ -1,8 +1,8 @@
 import os
-from selene import browser, be, have, command
+from selene import browser, be, have
 
 def test_form(browser_options):
-    browser.open('/automation-practice-form/')
+    browser.open('/automation-practice-form')
 
     #First_name
     browser.element('#firstName').should(be.blank).type('Rodion')
@@ -60,6 +60,6 @@ have.exact_texts('Label Values',
                          'State and City NCR Delhi',
                          )
     )
-browser.element('#closeLargeModal').should(be.clickable)
+browser.element('#closeLargeModal').should(be.clickable).click()
 
 
